@@ -20,6 +20,7 @@ export default function App() {
 
   const answerText = working ? '¡Sí!' : '¡No!'
   const answerColor = working ? '#cc0000' : '#009900'
+  const answerGif = working ? 'si.gif' : 'no.gif'
 
   const returnLabel = capitalize(
     format(nextChange, "EEEE d 'de' MMMM", { locale: es })
@@ -50,20 +51,35 @@ export default function App() {
           ¿Está {NOMBRE} de turno?
         </h1>
 
-        {/* Respuesta gigante */}
-        <p
-          className="font-comic"
+        {/* Respuesta gigante con GIF al lado */}
+        <div
           style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '20px',
             margin: '8px 0 18px',
-            fontSize: '64px',
-            fontWeight: 'bold',
-            color: answerColor,
-            textAlign: 'center',
-            lineHeight: 1,
+            flexWrap: 'wrap',
           }}
         >
-          {answerText}
-        </p>
+          <p
+            className="font-comic"
+            style={{
+              margin: 0,
+              fontSize: '64px',
+              fontWeight: 'bold',
+              color: answerColor,
+              lineHeight: 1,
+            }}
+          >
+            {answerText}
+          </p>
+          <img
+            src={`${import.meta.env.BASE_URL}${answerGif}`}
+            alt=""
+            style={{ maxWidth: '140px', maxHeight: '140px' }}
+          />
+        </div>
 
         {/* Info */}
         <p style={{ margin: '0 0 6px', fontSize: '14px', textAlign: 'center' }}>
