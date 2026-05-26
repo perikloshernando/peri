@@ -5,40 +5,54 @@ html, body, #root {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: #0b1220;
-  color: #e2e8f0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+  font-family: Verdana, Geneva, "MS Sans Serif", sans-serif;
+  background: #008080;
+  color: #000000;
 }
 
-/* Fondo con gradiente sutil + textura de puntos casi imperceptible */
-.paper-bg {
-  position: relative;
-  background:
-    radial-gradient(1200px 600px at 50% -100px, rgba(56, 189, 248, 0.08), transparent 60%),
-    radial-gradient(900px 500px at 100% 100%, rgba(251, 191, 36, 0.05), transparent 60%),
-    linear-gradient(180deg, #0b1220 0%, #0a0f1c 100%);
+/* Tarjeta blanca con borde rosado clásico Geocities */
+.gc-card {
+  background: #ffffff;
+  border: 5px solid #ff33cc;
+  outline: 2px solid #ffffff;
+  outline-offset: -10px;
+  box-shadow: 4px 4px 0 #000000;
 }
 
-.paper-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 1px 1px, rgba(226, 232, 240, 0.04) 1px, transparent 0);
-  background-size: 22px 22px;
-  pointer-events: none;
+.font-comic {
+  font-family: "Comic Sans MS", "Comic Sans", "Trebuchet MS", cursive;
 }
 
-.tabular { font-variant-numeric: tabular-nums; }
-
-/* Animación de entrada suave */
-@keyframes fade-up {
-  from { opacity: 0; transform: translateY(8px); }
-  to   { opacity: 1; transform: translateY(0); }
+/* Botón simple biselado en gris */
+.btn-gc {
+  background: #d0d0d0;
+  color: #000000;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+  padding: 3px 12px;
+  cursor: pointer;
 }
-.fade-up { animation: fade-up 0.5s ease-out both; }
-.fade-up-1 { animation-delay: 0.05s; }
-.fade-up-2 { animation-delay: 0.15s; }
+.btn-gc:active {
+  border-color: #808080 #ffffff #ffffff #808080;
+}
+
+/* Barra de progreso clásica con bloques */
+.progress-bar {
+  background: #ffffff;
+  border: 1px solid #808080;
+  height: 16px;
+  padding: 2px;
+  display: flex;
+  gap: 2px;
+}
+.progress-block {
+  flex: 1;
+  background: #000080;
+}
+.progress-block.empty {
+  background: transparent;
+}
