@@ -5,7 +5,7 @@ html, body, #root {
 }
 
 body {
-  font-family: "PT Sans", Verdana, Geneva, "MS Sans Serif", sans-serif;
+  font-family: Verdana, Geneva, "MS Sans Serif", "PT Sans", sans-serif;
   background: #008080;
   color: #000000;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 .font-comic {
-  font-family: "Comic Neue", "Comic Sans MS", "Comic Sans", "Trebuchet MS", cursive;
+  font-family: "Comic Sans MS", "Comic Sans", "Comic Neue", "Trebuchet MS", cursive;
 }
 
 /* Botón simple biselado en gris */

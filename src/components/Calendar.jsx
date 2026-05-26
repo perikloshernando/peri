@@ -124,7 +124,7 @@ export default function Calendar({ shiftStart }) {
                       padding: '8px 0',
                       width: '14.28%',
                       fontSize: '14px',
-                      fontFamily: '"PT Sans", Verdana, sans-serif',
+                      fontFamily: 'Verdana, "PT Sans", sans-serif',
                       fontWeight: isCurrent ? 'bold' : 'normal',
                       opacity: inMonth ? 1 : 0.45,
                     }}
