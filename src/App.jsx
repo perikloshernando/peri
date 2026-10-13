@@ -7,7 +7,7 @@ import { es } from 'date-fns/locale'
 // CONFIGURACIÓN — edita estas dos líneas con los datos reales
 // ─────────────────────────────────────────────────────────────
 const NOMBRE = 'Antonio'
-const INICIO_TURNO = new Date(2026, 5, 4)
+const INICIO_TURNO = new Date(2026, 9, 21) // miércoles 21 de octubre (el mes parte en 0)
 // ─────────────────────────────────────────────────────────────
 
 function capitalize(s) {
