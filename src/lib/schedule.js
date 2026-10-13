@@ -54,7 +54,9 @@ function startOfDay(date) {
  *   getCycleDay(new Date('2026-06-03'), new Date('2026-05-20')) // 14 (primer día en casa)
  */
 export function getCycleDay(date, shiftStart) {
-  const diff = Math.floor((startOfDay(date) - startOfDay(shiftStart)) / MS_PER_DAY)
+  // Se redondea en vez de truncar: si entre ambas fechas hay cambio de hora
+  // (horario de verano/invierno), la resta queda una hora corta o larga.
+  const diff = Math.round((startOfDay(date) - startOfDay(shiftStart)) / MS_PER_DAY)
   return ((diff % CYCLE_LENGTH) + CYCLE_LENGTH) % CYCLE_LENGTH
 }
 
